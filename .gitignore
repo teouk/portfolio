@@ -1,1 +1,8 @@
 .DS_Store
+.claude/
+# Personal job-application files and stray copies that must never be published
+/Teoman_Pisenis_CV.*
+*.docx
+*.xlsx
+*.zip
+/portfolio 2/

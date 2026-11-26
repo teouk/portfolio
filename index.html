@@ -49,7 +49,7 @@
       <div class="hero-copy">
         <p class="eyebrow"><span class="dot"></span> Open to graduate software engineering roles · 2027</p>
         <h1>Hi, I'm Teoman.<br><span class="grad">I build software people rely on.</span></h1>
-        <p class="lead">Final-year Computer Science student at Swansea University. I've built a live inventory platform that keeps an online retailer's Amazon, Shopify and eBay stock in sync, and for my dissertation I'm teaching a toy race car to drive itself.</p>
+        <p class="lead">Final-year Computer Science student at Swansea University. I've built a live inventory platform that keeps an online retailer's Amazon, Shopify and eBay stock in sync, and for my dissertation I'm teaching a slot car to race itself.</p>
         <div class="cta">
           <a class="btn btn-primary" href="#projects">See my work</a>
           <a class="btn btn-ghost" href="#contact">Get in touch</a>
@@ -62,13 +62,16 @@
         </ul>
       </div>
 
-      <figure class="hero-visual" aria-label="Animated race car lapping a track">
+      <figure class="hero-visual" aria-label="Animated slot car lapping a track">
         <div class="track-card">
           <div class="track-head">
             <span class="mono">dissertation.track_view</span>
-            <span class="live"><span class="dot"></span> learning</span>
+            <span class="track-controls">
+              <span class="live"><span class="dot"></span> <span class="track-status">learning</span></span>
+              <button class="track-toggle" type="button" hidden>Pause</button>
+            </span>
           </div>
-          <canvas id="track" role="img" aria-label="A small car driving laps around a race track, representing my dissertation project"></canvas>
+          <canvas id="track" role="img" aria-label="A red slot car driving laps around a track, getting faster each lap, representing my dissertation project"></canvas>
           <div class="track-foot mono">
             <span>LAP <b id="lap">1</b></span>
             <span>TIME <b id="lap-time">0.00s</b></span>
@@ -89,7 +92,7 @@
         <div class="about-copy">
           <p>I'm a final-year Computer Science student at Swansea University, graduating in June 2027. I learn best by building, so most of what I know came from real projects: a stock platform a business uses every day, a Spring Boot backend, and a homelab where I run my own AI models.</p>
           <p>What I enjoy most is turning a messy real-world problem into a tool that just works. That usually means understanding how people actually work before I write any code. On my biggest project, the smartest decision was keeping the owner's Excel workbook in sync instead of asking them to change how they work.</p>
-          <p>Alongside my degree I work around 20 hours a week in hospitality, which keeps me calm under pressure. Away from screens I hold a karate black belt after ten years of training, and I play the drums.</p>
+          <p>I spent over two years working part-time in hospitality alongside my studies, which taught me to stay calm under pressure. Away from screens I hold a karate black belt after ten years of training, and I play the drums.</p>
         </div>
         <dl class="facts">
           <div><dt>Based in</dt><dd>Swansea, UK</dd></div>
@@ -111,7 +114,7 @@
 
       <article class="feature">
         <div class="feature-media">
-          <img src="assets/glorious-dashboard.svg" alt="Inventory dashboard showing stock levels across Amazon, Shopify and eBay" width="960" height="600" loading="lazy">
+          <img src="assets/glorious-dashboard.png" alt="The inventory dashboard: product counts, stock status and per-channel stock for Amazon FBA, the depot, Shopify and eBay" width="2678" height="1706" loading="lazy" decoding="async">
         </div>
         <div class="feature-body">
           <p class="meta"><span class="badge badge-live">Live · in daily use</span> Freelance · 2025 – present</p>
@@ -119,7 +122,7 @@
           <p class="client">for Glorious Treats &amp; Chews, an online pet-food retailer</p>
           <p>The owner sold on Amazon, Shopify and eBay, held stock in a depot, and reconciled it all by hand in one master Excel workbook. I built a web app that gives them a single, live view of every product.</p>
           <ul class="highlights">
-            <li><b>172 products</b> from three marketplaces plus depot stock in one dashboard</li>
+            <li><b>113 products (173 SKUs)</b> from three marketplaces plus depot stock in one dashboard</li>
             <li>Stock changes sync between channels within <b>~5 seconds</b></li>
             <li>The owner's Excel workbook stays up to date automatically, so their workflow didn't change</li>
             <li>Secure sign-in, stock history and a bulk "receive delivery" flow</li>
@@ -146,7 +149,7 @@
             <rect width="480" height="300" rx="18" fill="var(--surface-2)"/>
             <path d="M90 150c0-62 52-92 120-92h70c70 0 112 30 112 86 0 64-52 98-124 98h-60c-74 0-118-30-118-92z" fill="none" stroke="var(--track)" stroke-width="34" stroke-linejoin="round"/>
             <path d="M90 150c0-62 52-92 120-92h70c70 0 112 30 112 86 0 64-52 98-124 98h-60c-74 0-118-30-118-92z" fill="none" stroke="url(#g-track)" stroke-width="3" stroke-dasharray="10 10"/>
-            <rect x="268" y="48" width="26" height="14" rx="4" fill="var(--accent-2)"/>
+            <rect x="268" y="48" width="26" height="14" rx="4" fill="#e11d48"/>
             <g fill="none" stroke="var(--muted)" stroke-width="2">
               <rect x="212" y="12" width="56" height="26" rx="6"/>
               <path d="m240 38 0 10" stroke-dasharray="2 4"/>
@@ -156,14 +159,88 @@
         </div>
         <div class="feature-body">
           <p class="meta"><span class="badge badge-progress">In progress</span> BSc dissertation · 2026 – 27</p>
-          <h3>Autonomous toy car racing</h3>
-          <p class="client">Can a car learn to drive a track faster than a human?</p>
-          <p>I started with no experience in this area. I researched supervised, transfer and curriculum learning (training on easy tasks first, then harder ones) and compared three platforms: a slot car filmed from above, an RC car with an onboard camera, and a motion-simulator rig. I weighed them on cost, how to collect training data, and risk.</p>
+          <h3>Autonomous Slot Car Racing</h3>
+          <p class="client">Can a slot car learn to race a track faster than a human?</p>
+          <p>I started with no experience in this area. I researched supervised, transfer and curriculum learning (training on easy tasks first, then harder ones) and compared three platforms on cost, how to collect training data, and risk: a slot car filmed from above, an RC car with an onboard camera, and a motion-simulator rig. I chose the slot car with an overhead camera.</p>
           <ul class="highlights">
             <li>Delivered a <b>5,500-word specification</b> and project plan on time</li>
             <li>Now building the learning pipeline and the car system</li>
           </ul>
           <ul class="tags"><li>Python</li><li>Machine learning</li><li>Computer vision</li><li>Curriculum learning</li></ul>
+        </div>
+      </article>
+
+      <article class="feature">
+        <div class="feature-media media-track">
+          <svg viewBox="0 0 480 300" role="img" aria-label="Sketch of two FOMO app screens: Discover with event cards, and Event Details with a weather card and an Add to plans button" font-family="Inter, Arial, sans-serif">
+            <rect width="480" height="300" rx="18" fill="var(--surface-2)"/>
+            <!-- Phone 1: Discover -->
+            <g transform="translate(76 14)">
+              <rect width="150" height="272" rx="22" fill="#1f2937"/>
+              <rect x="6" y="6" width="138" height="260" rx="17" fill="#fbfdfc"/>
+              <text x="16" y="30" font-size="9" font-weight="700" fill="#0f172a">Swansea ▾</text>
+              <rect x="16" y="38" width="118" height="20" rx="10" fill="#e6f2f0"/>
+              <text x="26" y="51" font-size="7" fill="#55607a">Search events</text>
+              <circle cx="124" cy="48" r="5" fill="none" stroke="#00897b" stroke-width="1.4"/>
+              <rect x="16" y="66" width="22" height="13" rx="6.5" fill="#00897b"/><text x="27" y="75" font-size="6" text-anchor="middle" fill="#fff">All</text>
+              <rect x="42" y="66" width="32" height="13" rx="6.5" fill="none" stroke="#c7d2d0"/><text x="58" y="75" font-size="6" text-anchor="middle" fill="#334155">Music</text>
+              <rect x="78" y="66" width="30" height="13" rx="6.5" fill="none" stroke="#c7d2d0"/><text x="93" y="75" font-size="6" text-anchor="middle" fill="#334155">Sport</text>
+              <rect x="112" y="66" width="22" height="13" rx="6.5" fill="none" stroke="#c7d2d0"/>
+              <text x="16" y="96" font-size="8" font-weight="700" fill="#0f172a">This weekend</text>
+              <defs><linearGradient id="fomo-hero" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#00897b"/><stop offset="1" stop-color="#ffb300"/></linearGradient></defs>
+              <rect x="16" y="102" width="118" height="58" rx="10" fill="url(#fomo-hero)"/>
+              <text x="24" y="146" font-size="7.5" font-weight="700" fill="#fff">Jazz Night</text>
+              <text x="24" y="155" font-size="6" fill="#fff" opacity=".9">Sat 20:00 · Swansea</text>
+              <text x="16" y="176" font-size="8" font-weight="700" fill="#0f172a">Near you</text>
+              <rect x="16" y="183" width="22" height="22" rx="5" fill="#b2dfdb"/>
+              <rect x="44" y="186" width="62" height="5" rx="2.5" fill="#334155"/><rect x="44" y="196" width="44" height="4" rx="2" fill="#94a3b8"/>
+              <rect x="16" y="211" width="22" height="22" rx="5" fill="#ffe0b2"/>
+              <rect x="44" y="214" width="56" height="5" rx="2.5" fill="#334155"/>
+              <text x="44" y="230" font-size="6" font-weight="700" fill="#e09a00">May clash</text>
+              <line x1="6" y1="242" x2="144" y2="242" stroke="#e2e8f0"/>
+              <circle cx="32" cy="254" r="4" fill="#00897b"/><circle cx="62" cy="254" r="4" fill="#cbd5e1"/><circle cx="92" cy="254" r="4" fill="#cbd5e1"/><circle cx="122" cy="254" r="4" fill="#cbd5e1"/>
+            </g>
+            <!-- Phone 2: Event Details -->
+            <g transform="translate(254 14)">
+              <rect width="150" height="272" rx="22" fill="#1f2937"/>
+              <rect x="6" y="6" width="138" height="260" rx="17" fill="#fbfdfc"/>
+              <path d="M6 23a17 17 0 0 1 17-17h104a17 17 0 0 1 17 17v61H6z" fill="url(#fomo-hero)"/>
+              <text x="16" y="102" font-size="9" font-weight="700" fill="#0f172a">Jazz Night</text>
+              <text x="16" y="114" font-size="6.5" fill="#55607a">Sat 20:00 · Swansea · £12</text>
+              <rect x="16" y="122" width="118" height="22" rx="7" fill="#fff4d6"/>
+              <text x="24" y="136" font-size="6.5" font-weight="600" fill="#8a5a00">You're busy: CSC306 lecture</text>
+              <rect x="16" y="150" width="118" height="30" rx="8" fill="#e6f2f0"/>
+              <circle cx="30" cy="165" r="7" fill="#ffb300"/>
+              <text x="44" y="163" font-size="7" font-weight="700" fill="#0f172a">14°C</text>
+              <text x="44" y="173" font-size="6" fill="#55607a">70% chance of rain</text>
+              <rect x="16" y="188" width="118" height="5" rx="2.5" fill="#cbd5e1"/>
+              <rect x="16" y="198" width="96" height="5" rx="2.5" fill="#cbd5e1"/>
+              <rect x="16" y="208" width="108" height="5" rx="2.5" fill="#cbd5e1"/>
+              <rect x="66" y="230" width="70" height="22" rx="11" fill="#00897b"/>
+              <text x="101" y="244" font-size="6.5" font-weight="700" text-anchor="middle" fill="#fff">+ Add to plans</text>
+            </g>
+          </svg>
+        </div>
+        <div class="feature-body">
+          <p class="meta"><span class="badge badge-progress">In progress</span> Mobile coursework (CSC306) · 2026 – 27</p>
+          <h3>FOMO: local events app</h3>
+          <p class="client">An Android app for finding things to do nearby, and planning which ones to go to</p>
+          <p>FOMO shows gigs, comedy, sport, theatre and family days out near you, lets you filter them by category, date and distance, and reminds you before an event starts. I've designed its three core screens, Discover, Search &amp; Filter and Event Details, as Material 3 XML layouts. The next stage wires them up to live Ticketmaster event data in Kotlin.</p>
+          <ul class="highlights">
+            <li>Bottom navigation chosen for <b>one-handed reach</b>, with labelled tabs so nothing is hidden in a menu</li>
+            <li>One shared list-row layout reused across screens, and light and dark themes from a single seed colour</li>
+            <li>Planned extras: a <b>poster scanner</b> (on-device text recognition), event-day weather, GPS check-ins with badges, and a calendar clash warning</li>
+          </ul>
+          <details class="notes">
+            <summary>Design notes</summary>
+            <ul>
+              <li><b>Why Search &amp; Filter as the third screen.</b> It completes one journey (browse, narrow down, act), adds an input-heavy layout to two list-style ones, and every control maps directly to a Ticketmaster query parameter.</li>
+              <li><b>Calendar clashes.</b> The check reads calendar <i>instances</i> rather than events, so a weekly lecture counts as each separate occurrence. All-day entries and entries marked "free" are ignored.</li>
+              <li><b>Weather API.</b> Open-Meteo over OpenWeatherMap: no API key, and hourly forecasts up to 16 days ahead instead of 5.</li>
+              <li><b>Permissions.</b> Each one is asked for only when its feature is first used, and every feature still works if it's refused.</li>
+            </ul>
+          </details>
+          <ul class="tags"><li>Kotlin</li><li>Android</li><li>Material 3</li><li>XML layouts</li></ul>
         </div>
       </article>
 
@@ -221,14 +298,6 @@
           </div>
         </li>
         <li>
-          <div class="when mono">Jan 2024 – Present</div>
-          <div class="what">
-            <h3>Bar Staff</h3>
-            <p class="where">Toby Carvery, Bridgend</p>
-            <p>Around 20 hours a week in a high-volume restaurant alongside full-time study, enforcing Challenge 25 and licensing rules.</p>
-          </div>
-        </li>
-        <li>
           <div class="when mono">Feb 2022 – Jan 2024</div>
           <div class="what">
             <h3>Sales Advisor</h3>
@@ -247,7 +316,7 @@
       </div>
       <div class="skills">
         <div class="skill-group"><h3>Languages</h3><ul class="tags"><li>Java</li><li>Python</li><li>TypeScript</li><li>JavaScript</li><li>Kotlin</li><li>SQL</li><li>Haskell</li><li>Bash</li></ul></div>
-        <div class="skill-group"><h3>Frameworks</h3><ul class="tags"><li>React</li><li>Next.js</li><li>Spring Boot</li><li>Tailwind CSS</li><li>JavaFX</li></ul></div>
+        <div class="skill-group"><h3>Frameworks</h3><ul class="tags"><li>React</li><li>Next.js</li><li>Spring Boot</li><li>Tailwind CSS</li><li>Android</li><li>JavaFX</li></ul></div>
         <div class="skill-group"><h3>Data &amp; AI</h3><ul class="tags"><li>PostgreSQL</li><li>Neon</li><li>MySQL</li><li>SQLite</li><li>Machine learning</li><li>Ollama</li></ul></div>
         <div class="skill-group"><h3>Tools &amp; platforms</h3><ul class="tags"><li>Git &amp; GitHub</li><li>Linux</li><li>Docker</li><li>Vercel</li><li>n8n</li><li>Gradle</li></ul></div>
       </div>
