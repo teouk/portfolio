@@ -163,6 +163,7 @@ h2 { font-size: clamp(1.8rem, 3.5vw, 2.4rem); font-weight: 800; }
 .feature-alt .feature-media { order: 2; }
 .feature-media img, .feature-media svg { width: 100%; height: auto; border-radius: 14px; border: 1px solid var(--border); }
 .media-track svg { border: 0; }
+.media-stack { display: grid; gap: 14px; align-self: start; }
 .meta { display: flex; flex-wrap: wrap; align-items: center; gap: 10px; font-size: 14px; color: var(--muted); margin-bottom: 10px; }
 .badge { font-size: 12px; font-weight: 700; padding: 4px 10px; border-radius: 999px; }
 .badge-live { background: rgba(15, 163, 127, .15); color: var(--accent-2); }
